@@ -33,17 +33,23 @@ print(f"German meetings: {len(meetings_de)}")
 
 ## Overview
 
-The **FAME Dataset** addresses the scarcity of meeting data for research in meeting summarization and conversational AI. All 800 meeting transcripts are synthetically generated using the MIMIC framework, ensuring no privacy concerns while providing realistic conversational patterns.
+The **FAME Dataset** addresses the scarcity of meeting data for research in meeting summarization and conversational AI. All meeting transcripts are synthetically generated using the MIMIC framework, ensuring no privacy concerns while providing realistic conversational patterns.
 
 <!-- ### Dataset Statistics
 
-| Metric | English | German | Total |
+| Metric | English | German |
 |--------|---------|---------|-------|
-| **Meetings** | 500 | 300 | 800 |
-| **Participants** | 2,000+ | 1,200+ | 3,200+ |
-| **Meeting Types** | 14 | 14 | 14 |
-| **Topic Domains** | 28 | 28 | 28 |
-| **Avg Duration** | 22 min | 21 min | 21.6 min | -->
+| **Meetings** | 500 | 261 |
+| **Participants** | 2,800+ | 1,200+ |
+| **Meeting Types** | 14 | 14 |
+| **Topic Domains** | 28 | 20 |
+| **Unique Topics** | 498 | 211 | -->
+
+### Key Statistics for 'small' versions aligned with statistics in the paper
+| Dataset | # Meetings | # Speaker | # Unique Spea. | # Turns | # Words | Vocab. | Token Overlap | Sum. Len. | Interruptions | Language |
+|---------|------------|-----------|----------------|---------|---------|--------|---------------|-----------|---------------|----------|
+| EN      | 500        | 5.6₂.₅   | 1201           | 80.7₁₇.₀ | 2654.4₅₈₄.₆ | 20799 | 0.221         | 174.5₂₈.₅ | yes (~0.7)    | both     |
+| GER     | 261        | 4.9₂.₀   | 506            | 69.7₁₃.₀ | 2215.1₄₁₁.₃ | 22121 | 0.152         | 152.5₂₂.₅ | yes (~0.7)    | both     |
 
 ## Dataset Structure
 
@@ -56,7 +62,7 @@ fame_dataset/
 │   └── ... (497 more files)
 ├── German/                         # German meeting transcripts
 │   ├── Brainstorming_Session_Anthropology_German_Biological_Anthropology.csv
-│   └── ... (297 more files)
+│   └── ... (260 more files)
 ├── schema/
 │   └── meeting_schema.json         # CSV column specifications
 ├── README.md                       # This file
@@ -104,12 +110,11 @@ If you use this dataset, please cite our ACL 2025 paper:
 ### Getting Help
 1. **Issues**: Open a GitHub issue for technical problems
 2. **Questions**: Email kirstein@gipplab.org
-3. **Community**: Join discussions in GitHub Discussions
 
 ### Future Updates
-- **Version 0.9**: ACL 2025 pre-release
+- **Version 0.9.1**: Fixing minor inconsistencies in generated transcripts; releasing as 'small' version.
 
-### Current Version: 0.9
+### Current Version: 0.9.1
 - Release Date: 2025-07-28
 - Changes: Initial public release
 
